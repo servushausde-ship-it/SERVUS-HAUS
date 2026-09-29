@@ -2,6 +2,37 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
+  <!-- Google Consent Mode v2: Standard = alles abgelehnt; gespeicherte Auswahl wird sofort übernommen -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+    try {
+      var c = JSON.parse(localStorage.getItem('sh_consent_v1') || 'null');
+      if (c && Date.now() - c.ts < 31536000000) {
+        gtag('consent', 'update', {
+          analytics_storage: c.statistik ? 'granted' : 'denied',
+          ad_storage: c.marketing ? 'granted' : 'denied',
+          ad_user_data: c.marketing ? 'granted' : 'denied',
+          ad_personalization: c.marketing ? 'granted' : 'denied'
+        });
+      }
+    } catch (e) {}
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5SMTG23J');</script>
+  <!-- End Google Tag Manager -->
+  <script defer src="/consent.js?v=20260928"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datenschutzerklärung | SERVUS HAUS</title>
   <meta name="description" content="Datenschutzerklärung von SERVUS HAUS, einer Geschäftsbezeichnung der Shvets Bau GmbH.">
@@ -10,6 +41,8 @@
   <link rel="stylesheet" href="styles.css?v=20260926">
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SMTG23J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo"><img src="images/logo.jpeg" alt="SERVUS HAUS" class="logo-img" width="1280" height="426"></a>
@@ -25,7 +58,7 @@
       <h2>1. Verantwortlicher</h2>
       <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer datenschutzrechtlicher Bestimmungen ist:</p>
       <p>Shvets Bau GmbH<br>Mühlengasse 8<br>91332 Heiligenstadt i.OFr.<br>Deutschland</p>
-      <p>Geschäftsführer: Yevhenii Shvets<br>Telefon (Festnetz): <a href="tel:+4991982370831">+49 9198 2370831</a><br>Telefon (Mobil für Messenger): <a href="tel:+4915110173628">+49 151 10173628</a><br>E-Mail: <a href="mailto:oberfrankenbau@gmail.com">oberfrankenbau@gmail.com</a></p>
+      <p>Geschäftsführer: Yevhenii Shvets<br>Telefon (Festnetz): <a href="tel:+4991982370831">+49 9198 2370831</a><br>Telefon (Mobil/WhatsApp): <a href="tel:+491775011880">+49 177 5011880</a><br>E-Mail: <a href="mailto:oberfrankenbau@gmail.com">oberfrankenbau@gmail.com</a></p>
       <p>Die Website servushaus.de wird unter der Geschäftsbezeichnung SERVUS HAUS betrieben.</p>
 
       <h2>2. Allgemeine Hinweise zur Datenverarbeitung</h2>
@@ -46,17 +79,27 @@
       <p>Soweit dies für die Bearbeitung Ihrer Anfrage, die Angebotserstellung oder die Durchführung eines Bauprojekts erforderlich und rechtlich zulässig ist, können personenbezogene Daten an eingebundene Fachunternehmen oder Berater übermittelt werden, beispielsweise an Architekten, Statiker, Energieberater, Fachplaner oder ausführende Unternehmen. Die Übermittlung erfolgt nur im erforderlichen Umfang und auf einer entsprechenden Rechtsgrundlage.</p>
 
       <h2>8. Empfänger und Auftragsverarbeiter</h2>
-      <p>Empfänger personenbezogener Daten sind neben uns folgende Kategorien von Dienstleistern: Hosting-Anbieter, ein Messenger-Dienst zur Weiterleitung von Formularanfragen sowie unser E-Mail-Anbieter. Soweit Dienstleister Daten in unserem Auftrag verarbeiten, geschieht dies auf Grundlage von Art. 28 DSGVO. Im Rahmen eines Bauprojekts gelten zusätzlich die Hinweise unter Ziffer 7.</p>
+      <p>Empfänger personenbezogener Daten sind neben uns folgende Kategorien von Dienstleistern: Hosting-Anbieter, ein Messenger-Dienst zur Weiterleitung von Formularanfragen, unser E-Mail-Anbieter sowie – nur mit Ihrer Einwilligung – Google (siehe Ziffer 9). Soweit Dienstleister Daten in unserem Auftrag verarbeiten, geschieht dies auf Grundlage von Art. 28 DSGVO. Im Rahmen eines Bauprojekts gelten zusätzlich die Hinweise unter Ziffer 7.</p>
       <h2>9. Cookies, Analyse und Tracking</h2>
-      <p>Diese Website setzt keine Cookies und verwendet keine Analyse-, Tracking- oder Marketingdienste. Es werden keine Informationen in Ihrem Endgerät gespeichert oder ausgelesen, die über das technisch Erforderliche hinausgehen. Schriftarten werden nicht von externen Servern geladen.</p>
-
+      <p>Wir setzen Cookies und ähnliche Technologien (z.&nbsp;B. Speicherung im lokalen Speicher Ihres Browsers) nur ein, soweit sie technisch erforderlich sind oder Sie eingewilligt haben (§&nbsp;25 TDDDG, Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO).</p>
+      <h3>9.1 Einwilligungsverwaltung</h3>
+      <p>Beim ersten Besuch fragen wir Sie über ein Banner, ob Sie Statistik- und/oder Marketing-Technologien zulassen. Ihre Auswahl (einschließlich Zeitpunkt) speichern wir für 12&nbsp;Monate im lokalen Speicher Ihres Browsers (Schlüssel „sh_consent_v1“). Diese Speicherung ist technisch erforderlich, um Ihre Entscheidung zu beachten (§&nbsp;25 Abs.&nbsp;2 Nr.&nbsp;2 TDDDG, Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;c DSGVO i.&nbsp;V.&nbsp;m. Art.&nbsp;7 Abs.&nbsp;1 DSGVO). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft über den Link „Cookie-Einstellungen“ im Seitenfuß ändern oder widerrufen.</p>
+      <h3>9.2 Google Tag Manager</h3>
+      <p>Wir nutzen den Google Tag Manager der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland („Google“). Der Tag Manager ist ein Werkzeug, mit dem wir Tracking- und Statistik-Dienste auf unserer Website verwalten. Er selbst setzt keine Cookies und wertet keine Daten aus; beim Laden wird jedoch Ihre IP-Adresse technisch bedingt an Google übermittelt. Die eingebundenen Dienste werden erst nach Ihrer Einwilligung aktiviert (Google Consent Mode). Rechtsgrundlage ist Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO; unser berechtigtes Interesse liegt in der einfachen und datenschutzkonformen Verwaltung dieser Dienste.</p>
+      <h3>9.3 Google Analytics 4 (Statistik – nur mit Einwilligung)</h3>
+      <p>Mit Ihrer Einwilligung nutzen wir Google Analytics 4, einen Webanalysedienst von Google. Google Analytics setzt Cookies und erfasst z.&nbsp;B. aufgerufene Seiten, Verweildauer, Herkunft des Besuchs (etwa aus einer Anzeige oder Suche), ungefähren Standort (Land/Region), Gerät und Browser sowie Interaktionen wie das Absenden einer Anfrage oder Klicks auf Telefon- und WhatsApp-Links. IP-Adressen werden in der EU von Google nicht gespeichert. Wir nutzen die Daten, um unsere Website und unser Angebot zu verbessern. Rechtsgrundlage ist Ihre Einwilligung (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO, §&nbsp;25 Abs.&nbsp;1 TDDDG). Die Daten werden nach 14&nbsp;Monaten gelöscht. Ohne Einwilligung werden keine Analytics-Cookies gesetzt; Google erhält dann lediglich cookielose Signale ohne Nutzerkennung (Google Consent Mode).</p>
+      <h3>9.4 Google Ads Conversion-Tracking und Remarketing (Marketing – nur mit Einwilligung)</h3>
+      <p>Wir schalten Anzeigen über Google Ads. Mit Ihrer Einwilligung setzt Google Cookies, um zu messen, ob nach einem Klick auf eine unserer Anzeigen eine Anfrage gesendet oder ein Anruf-Link angeklickt wurde (Conversion-Tracking), und um Nutzern unserer Website später erneut Anzeigen zeigen zu können (Remarketing). Beim Absenden des Anfrageformulars können zusätzlich Ihre E-Mail-Adresse und Telefonnummer in verschlüsselter (gehashter) Form an Google übermittelt werden, damit Google die Anfrage einer Anzeige zuordnen kann („erweiterte Conversions“); Google verwendet diese Daten nicht zur Personalisierung von Anzeigen für Dritte. Wir erhalten nur zusammengefasste Statistiken, keine Informationen, mit denen wir Sie persönlich identifizieren können. Rechtsgrundlage ist Ihre Einwilligung (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO, §&nbsp;25 Abs.&nbsp;1 TDDDG).</p>
+      <h3>9.5 Datenübermittlung an Google in die USA</h3>
+      <p>Google kann Daten auch an die Google LLC in den USA übermitteln. Google LLC ist unter dem EU-US Data Privacy Framework zertifiziert; für die Übermittlung besteht damit ein Angemessenheitsbeschluss der EU-Kommission (Art.&nbsp;45 DSGVO). Weitere Informationen: <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener">Datenschutzerklärung von Google</a> und <a href="https://business.safety.google/privacy/?hl=de" target="_blank" rel="noopener">Datenschutz bei Google-Werbeprodukten</a>.</p>
+      <p>Schriftarten werden nicht von externen Servern geladen.</p>
       <h2>10. Links zu WhatsApp, Instagram und TikTok</h2>
       <p>Auf unserer Website finden Sie einfache Links zu WhatsApp, Instagram und TikTok. Es handelt sich nicht um eingebettete Plugins: Beim bloßen Aufruf unserer Website werden keine Daten an diese Anbieter übertragen. Erst wenn Sie einen Link anklicken, werden Sie auf die Seite bzw. App des jeweiligen Anbieters weitergeleitet, der dann eigenverantwortlich Daten verarbeitet. Wenn Sie uns über WhatsApp schreiben, verarbeiten wir Ihre Nachricht und Telefonnummer zur Beantwortung Ihrer Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Anbieter von WhatsApp und Instagram ist die Meta Platforms Ireland Ltd., Anbieter von TikTok die TikTok Technology Limited (Irland).</p>
       <h2>11. Speicherdauer</h2>
       <p>Wir speichern personenbezogene Daten nur so lange, wie dies für den jeweiligen Verarbeitungszweck erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Nach Wegfall des Verarbeitungszwecks werden die Daten gelöscht, sofern keine gesetzlichen Aufbewahrungsfristen oder sonstigen zulässigen Gründe für eine weitere Speicherung bestehen.</p>
 
       <h2>12. Datenübermittlung in Drittländer</h2>
-      <p>Einige der von uns eingesetzten Dienstleister, insbesondere Hosting-, E-Mail- und Messenger-Anbieter, können personenbezogene Daten auch außerhalb der Europäischen Union bzw. des Europäischen Wirtschaftsraums verarbeiten. Eine solche Übermittlung erfolgt nur, wenn die Voraussetzungen der Art. 44 ff. DSGVO erfüllt sind – insbesondere auf Grundlage eines Angemessenheitsbeschlusses der EU-Kommission (etwa des EU-US Data Privacy Framework für zertifizierte Unternehmen in den USA), geeigneter Garantien wie EU-Standardvertragsklauseln oder einer Ausnahme nach Art. 49 DSGVO. Auf Anfrage teilen wir Ihnen mit, welche Dienstleister wir aktuell einsetzen und auf welcher Grundlage eine Übermittlung erfolgt.</p>
+      <p>Einige der von uns eingesetzten Dienstleister, insbesondere Hosting-, E-Mail- und Messenger-Anbieter sowie Google (siehe Ziffer 9.5), können personenbezogene Daten auch außerhalb der Europäischen Union bzw. des Europäischen Wirtschaftsraums verarbeiten. Eine solche Übermittlung erfolgt nur, wenn die Voraussetzungen der Art. 44 ff. DSGVO erfüllt sind – insbesondere auf Grundlage eines Angemessenheitsbeschlusses der EU-Kommission (etwa des EU-US Data Privacy Framework für zertifizierte Unternehmen in den USA), geeigneter Garantien wie EU-Standardvertragsklauseln oder einer Ausnahme nach Art. 49 DSGVO. Auf Anfrage teilen wir Ihnen mit, welche Dienstleister wir aktuell einsetzen und auf welcher Grundlage eine Übermittlung erfolgt.</p>
       <h2>13. Ihre Rechte</h2>
       <p>Sie haben nach Maßgabe der gesetzlichen Voraussetzungen insbesondere das Recht auf Auskunft gemäß Art. 15 DSGVO, Berichtigung gemäß Art. 16 DSGVO, Löschung gemäß Art. 17 DSGVO, Einschränkung der Verarbeitung gemäß Art. 18 DSGVO, Datenübertragbarkeit gemäß Art. 20 DSGVO sowie Widerspruch gemäß Art. 21 DSGVO. Soweit eine Verarbeitung auf Ihrer Einwilligung beruht, können Sie diese gemäß Art. 7 Abs. 3 DSGVO jederzeit mit Wirkung für die Zukunft widerrufen.</p>
 
@@ -74,6 +117,7 @@
       <nav class="footer-legal-links" aria-label="Rechtliche Hinweise">
         <a href="/impressum">Impressum</a>
         <a href="/datenschutz" aria-current="page">Datenschutzerklärung</a>
+        <a href="#" data-cookie-settings>Cookie-Einstellungen</a>
       </nav>
     </div>
   </footer>

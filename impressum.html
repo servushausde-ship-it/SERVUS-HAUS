@@ -2,6 +2,37 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
+  <!-- Google Consent Mode v2: Standard = alles abgelehnt; gespeicherte Auswahl wird sofort übernommen -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+    try {
+      var c = JSON.parse(localStorage.getItem('sh_consent_v1') || 'null');
+      if (c && Date.now() - c.ts < 31536000000) {
+        gtag('consent', 'update', {
+          analytics_storage: c.statistik ? 'granted' : 'denied',
+          ad_storage: c.marketing ? 'granted' : 'denied',
+          ad_user_data: c.marketing ? 'granted' : 'denied',
+          ad_personalization: c.marketing ? 'granted' : 'denied'
+        });
+      }
+    } catch (e) {}
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5SMTG23J');</script>
+  <!-- End Google Tag Manager -->
+  <script defer src="/consent.js?v=20260928"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impressum | SERVUS HAUS</title>
   <meta name="description" content="Impressum von SERVUS HAUS, einer Geschäftsbezeichnung der Shvets Bau GmbH.">
@@ -10,6 +41,8 @@
   <link rel="stylesheet" href="styles.css?v=20260926">
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SMTG23J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo"><img src="images/logo.jpeg" alt="SERVUS HAUS" class="logo-img" width="1280" height="426"></a>
@@ -27,7 +60,7 @@
       <p>Vertreten durch den Geschäftsführer:<br>Yevhenii Shvets</p>
 
       <h2>Kontakt</h2>
-      <p>Telefon (Festnetz): <a href="tel:+4991982370831">+49 9198 2370831</a><br>Telefon (Mobil für Messenger): <a href="tel:+4915110173628">+49 151 10173628</a><br>E-Mail: <a href="mailto:oberfrankenbau@gmail.com">oberfrankenbau@gmail.com</a></p>
+      <p>Telefon (Festnetz): <a href="tel:+4991982370831">+49 9198 2370831</a><br>Telefon (Mobil/WhatsApp): <a href="tel:+491775011880">+49 177 5011880</a><br>E-Mail: <a href="mailto:oberfrankenbau@gmail.com">oberfrankenbau@gmail.com</a></p>
 
       <h2>Registereintrag</h2>
       <p>Registergericht: Amtsgericht Bamberg<br>Handelsregister: HRB 11254</p>
@@ -55,6 +88,7 @@
       <nav class="footer-legal-links" aria-label="Rechtliche Hinweise">
         <a href="/impressum" aria-current="page">Impressum</a>
         <a href="/datenschutz">Datenschutzerklärung</a>
+        <a href="#" data-cookie-settings>Cookie-Einstellungen</a>
       </nav>
     </div>
   </footer>

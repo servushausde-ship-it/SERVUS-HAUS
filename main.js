@@ -6,8 +6,9 @@
   const PROD_HOSTS = ['servushaus.de', 'www.servushaus.de', 'servus-haus-eight.vercel.app'];
   const IS_TEST = !PROD_HOSTS.includes(window.location.hostname);
 
+  window.dataLayer = window.dataLayer || [];
   function track(name, params = {}) {
-    if (typeof gtag === 'function') gtag('event', name, params);
+    window.dataLayer.push(Object.assign({ event: name }, params));
   }
 
   function setUtmAndUrl() {
@@ -81,7 +82,7 @@
         message.hidden = false;
         message.className = 'form-message';
       }
-      track('form_submit', { source: form.querySelector('input[name="source"]')?.value });
+      track('form_submit_attempt', { source: form.querySelector('input[name="source"]')?.value });
 
       if (!form.checkValidity()) {
         form.reportValidity();
@@ -122,6 +123,16 @@
         });
         const body = await res.json().catch(() => ({}));
         if (!res.ok) throw new Error(body.error || 'Fehler beim Senden');
+        // Erfolgreiche Anfrage -> Conversion (GTM: Google Ads + GA4 generate_lead)
+        track('lead_form_submit', {
+          form_id: form.id,
+          house_size: data.groesse || '',
+          plot: data.grundstueck || '',
+          user_data: {
+            email: (data.email || '').trim().toLowerCase(),
+            phone_number: (data.telefon_mobil || '').replace(/[^\d+]/g, '').replace(/^00/, '+').replace(/^0/, '+49')
+          }
+        });
         if (message) {
           message.textContent = 'Vielen Dank. Wir melden uns persönlich bei Ihnen.';
           message.classList.add('success');

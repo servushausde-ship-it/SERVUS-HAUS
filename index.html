@@ -2,15 +2,46 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
+  <!-- Google Consent Mode v2: Standard = alles abgelehnt; gespeicherte Auswahl wird sofort übernommen -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+    try {
+      var c = JSON.parse(localStorage.getItem('sh_consent_v1') || 'null');
+      if (c && Date.now() - c.ts < 31536000000) {
+        gtag('consent', 'update', {
+          analytics_storage: c.statistik ? 'granted' : 'denied',
+          ad_storage: c.marketing ? 'granted' : 'denied',
+          ad_user_data: c.marketing ? 'granted' : 'denied',
+          ad_personalization: c.marketing ? 'granted' : 'denied'
+        });
+      }
+    } catch (e) {}
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5SMTG23J');</script>
+  <!-- End Google Tag Manager -->
+  <script defer src="/consent.js?v=20260928"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIP-Haus schlüsselfertig in Bayern | SERVUS HAUS</title>
-  <meta name="description" content="Schlüsselfertige SIP-Häuser mit 120, 160 oder 220 m² von SERVUS HAUS (Shvets Bau GmbH, Oberfranken). Richtpreis 2.900 €/m², Bauphase ca. 3 Monate ab Baustart. Kostenlose Ersteinschätzung anfordern.">
+  <meta name="description" content="Schlüsselfertige SIP-Häuser mit 120, 160 oder 220 m² von SERVUS HAUS (Shvets Bau GmbH, Oberfranken). Richtpreis 2.900 €/m² inkl. MwSt., Bauphase ca. 3 Monate ab Baustart. Kostenlose Ersteinschätzung anfordern.">
   <link rel="canonical" href="https://servushaus.de/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
   <meta property="og:site_name" content="SERVUS HAUS">
   <meta property="og:title" content="SIP-Haus schlüsselfertig in Bayern | SERVUS HAUS">
-  <meta property="og:description" content="Schlüsselfertige SIP-Häuser mit 120, 160 oder 220 m². Richtpreis 2.900 €/m². Kostenlose Ersteinschätzung anfordern.">
+  <meta property="og:description" content="Schlüsselfertige SIP-Häuser mit 120, 160 oder 220 m². Richtpreis 2.900 €/m² inkl. MwSt. Kostenlose Ersteinschätzung anfordern.">
   <meta property="og:url" content="https://servushaus.de/">
   <meta property="og:image" content="https://servushaus.de/images/opt/og-servus-haus.jpg">
   <meta property="og:image:alt" content="Visualisierung eines weiß verputzten Einfamilienhauses mit dunklem Satteldach">
@@ -21,7 +52,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="manifest" href="images/site.webmanifest">
   <link rel="stylesheet" href="styles.css?v=20260926">
-  <script defer src="main.js?v=20260926"></script>
+  <script defer src="main.js?v=20260928"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,7 +63,7 @@
     "url": "https://servushaus.de/",
     "logo": "https://servushaus.de/images/logo.jpeg",
     "image": "https://servushaus.de/images/opt/og-servus-haus.jpg",
-    "telephone": "+49 9198 2370831",
+    "telephone": "+49 177 5011880",
     "email": "oberfrankenbau@gmail.com",
     "vatID": "DE361656866",
     "address": {
@@ -45,7 +76,8 @@
     },
     "areaServed": [
       { "@type": "State", "name": "Bayern" },
-      { "@type": "State", "name": "Baden-Württemberg" }
+      { "@type": "State", "name": "Thüringen" },
+      { "@type": "Country", "name": "Deutschland" }
     ],
     "sameAs": [
       "https://www.instagram.com/servushaus.de/",
@@ -55,13 +87,15 @@
   </script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SMTG23J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="SERVUS HAUS – zur Startseite"><img src="images/logo.jpeg" alt="SERVUS HAUS" class="logo-img" width="1280" height="426"></a>
-      <a href="tel:+4991982370831" class="header-phone" data-cta="phone_click_mobile" aria-label="Anrufen: +49 9198 2370831">
+      <a href="tel:+491775011880" class="header-phone" data-cta="phone_click_mobile" aria-label="Anrufen: +49 177 5011880">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
-        <span>09198 2370831</span>
+        <span>0177 5011880</span>
       </a>
       <nav class="main-nav" aria-label="Hauptnavigation">
         <a href="#modelle" class="nav-link" data-cta="nav_modelle">Modelle &amp; Preise</a>
@@ -69,7 +103,7 @@
         <a href="#leistungen" class="nav-link" data-cta="nav_leistungen">Leistungen</a>
         <a href="#ablauf" class="nav-link" data-cta="nav_ablauf">Ablauf</a>
         <a href="#faq" class="nav-link" data-cta="nav_faq">FAQ</a>
-        <a href="tel:+4991982370831" class="nav-link phone" data-cta="phone_click">09198 2370831</a>
+        <a href="tel:+491775011880" class="nav-link phone" data-cta="phone_click">0177 5011880</a>
         <a href="#anfrage" class="btn btn-primary btn-small" data-cta="nav_anfrage">Anfrage</a>
       </nav>
       <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
@@ -84,8 +118,8 @@
       <a href="#faq" data-cta="nav_faq">FAQ</a>
       <a href="#anfrage" data-cta="nav_anfrage">Kostenlose Ersteinschätzung</a>
       <div class="mobile-contact">
-        <a href="tel:+4991982370831" data-cta="phone_click">Anrufen: 09198 2370831</a>
-        <a href="https://wa.me/4915110173628" target="_blank" rel="noopener" data-cta="whatsapp_click">WhatsApp: 0151 10173628</a>
+        <a href="tel:+491775011880" data-cta="phone_click">Anrufen: 0177 5011880</a>
+        <a href="https://wa.me/491775011880" target="_blank" rel="noopener" data-cta="whatsapp_click">WhatsApp: 0177 5011880</a>
         <a href="mailto:oberfrankenbau@gmail.com" data-cta="email_click">E-Mail schreiben</a>
       </div>
     </div>
@@ -111,7 +145,7 @@
             <a href="#anfrage" class="btn btn-primary" data-cta="hero_anfrage">Kostenlose Ersteinschätzung</a>
             <a href="#modelle" class="btn btn-secondary" data-cta="hero_modelle">Modelle &amp; Preise ansehen</a>
           </div>
-          <p class="hero-price"><span>Modelle mit 120, 160 oder 220 m²</span><span>Richtpreis 2.900 €/m²</span></p>
+          <p class="hero-price"><span>Modelle mit 120, 160 oder 220 m²</span><span>Richtpreis 2.900 €/m² inkl. MwSt.</span></p>
         </div>
       </div>
       <span class="hero-visual-label">Visualisierung</span>
@@ -173,7 +207,7 @@
             <h3>SERVUS 120</h3>
             <p class="model-size">120 m²</p>
             <p class="model-desc">Kompakt und modern – ideal für Paare oder kleine Familien.</p>
-            <p class="model-price">Richtpreis 348.000 €</p>
+            <p class="model-price">Richtpreis 348.000 € inkl. MwSt.</p>
             <a href="#anfrage" class="btn btn-secondary" data-cta="model_120" data-set-size="120 m²">SERVUS 120 anfragen</a>
           </article>
           <article class="model-card" data-size="160 m²">
@@ -181,7 +215,7 @@
             <h3>SERVUS 160</h3>
             <p class="model-size">160 m²</p>
             <p class="model-desc">Viel Platz für die Familie: 3 Schlafzimmer, Arbeitszimmer, Ankleide, 2 Bäder und ein offener Wohnbereich.</p>
-            <p class="model-price">Richtpreis 464.000 €</p>
+            <p class="model-price">Richtpreis 464.000 € inkl. MwSt.</p>
             <a href="#anfrage" class="btn btn-secondary" data-cta="model_160" data-set-size="160 m²">SERVUS 160 anfragen</a>
           </article>
           <article class="model-card" data-size="220 m²">
@@ -189,11 +223,11 @@
             <h3>SERVUS 220</h3>
             <p class="model-size">220 m²</p>
             <p class="model-desc">Großzügig wohnen – mit Raum für Gäste, Homeoffice oder eine Einliegerwohnung.</p>
-            <p class="model-price">Richtpreis 638.000 €</p>
+            <p class="model-price">Richtpreis 638.000 € inkl. MwSt.</p>
             <a href="#anfrage" class="btn btn-secondary" data-cta="model_220" data-set-size="220 m²">SERVUS 220 anfragen</a>
           </article>
         </div>
-        <p class="note"> Richtpreis 2.900 €/m² für den unter „Im Richtpreis vorgesehen“ beschriebenen Leistungsumfang. Nicht enthalten sind Grundstück, Planung und Genehmigungen, externe Anschlüsse, Außenanlagen, Möbel, Einbaugeräte und individuelle Extras. Den verbindlichen Gesamtpreis einschließlich der gesetzlichen Mehrwertsteuer erhalten Sie mit dem individuellen Angebot und der Baubeschreibung.</p>
+        <p class="note"> Richtpreis 2.900 €/m² inkl. gesetzlicher MwSt. für den unter „Im Richtpreis vorgesehen“ beschriebenen Leistungsumfang. Nicht enthalten sind Grundstück, Planung und Genehmigungen, externe Anschlüsse, Außenanlagen, Möbel, Einbaugeräte und individuelle Extras. Den verbindlichen Gesamtpreis einschließlich der gesetzlichen Mehrwertsteuer erhalten Sie mit dem individuellen Angebot und der Baubeschreibung.</p>
         <p class="models-note">Auf Anfrage planen wir auch Bungalows, Anbauten, Ferienhäuser und kleinere Wohnanlagen.</p>
       </div>
     </section>
@@ -355,7 +389,7 @@
             </details>
             <details>
               <summary>In welchen Regionen bauen Sie?</summary>
-              <p>Unser Sitz ist Heiligenstadt in Oberfranken. Wir bauen in Bayern und Baden-Württemberg.</p>
+              <p>Unser Sitz ist Heiligenstadt in Oberfranken. Wir bauen in Bayern und Thüringen sowie auf Anfrage in ganz Deutschland.</p>
             </details>
             <details>
               <summary>Gibt es Finanzierung oder Förderung?</summary>
@@ -415,7 +449,7 @@
           <input type="hidden" name="utm" class="utm-field">
           <input type="hidden" name="url" class="url-field">
           <button type="submit" class="btn btn-primary" data-cta="final_form_submit" id="final-submit">Ersteinschätzung anfordern</button>
-          <p class="form-alt">Lieber direkt sprechen? <a href="tel:+4991982370831" data-cta="phone_click_form">09198 2370831</a> · <a href="https://wa.me/4915110173628" target="_blank" rel="noopener" data-cta="whatsapp_click_form">WhatsApp</a></p>
+          <p class="form-alt">Lieber direkt sprechen? <a href="tel:+491775011880" data-cta="phone_click_form">0177 5011880</a> · <a href="https://wa.me/491775011880" target="_blank" rel="noopener" data-cta="whatsapp_click_form">WhatsApp</a></p>
           <p class="form-message" role="status" aria-live="polite" hidden></p>
         </form>
       </div>
@@ -429,7 +463,7 @@
           <h2 class="footer-h">Kontakt</h2>
           <p class="brand-legal"><strong>SERVUS HAUS</strong><br>Geschäftsbezeichnung der Shvets Bau GmbH</p>
           <p>Shvets Bau GmbH<br>Mühlengasse 8<br>91332 Heiligenstadt i.OFr.</p>
-          <p>Telefon: <a href="tel:+4991982370831" data-cta="phone_click_footer">09198 2370831</a><br>Mobil/WhatsApp: <a href="https://wa.me/4915110173628" target="_blank" rel="noopener" data-cta="whatsapp_click_footer">0151 10173628</a><br>E-Mail: <a href="mailto:oberfrankenbau@gmail.com" data-cta="email_click">oberfrankenbau@gmail.com</a></p>
+          <p>Mobil/WhatsApp: <a href="tel:+491775011880" data-cta="phone_click_footer">0177 5011880</a><br>Festnetz: <a href="tel:+4991982370831" data-cta="phone_click_footer_festnetz">09198 2370831</a><br>E-Mail: <a href="mailto:oberfrankenbau@gmail.com" data-cta="email_click">oberfrankenbau@gmail.com</a></p>
         </div>
         <div>
           <h2 class="footer-h">Folgen Sie uns</h2>
@@ -442,6 +476,7 @@
       <nav class="footer-legal-links" aria-label="Rechtliche Hinweise">
         <a href="/impressum">Impressum</a>
         <a href="/datenschutz">Datenschutzerklärung</a>
+        <a href="#" data-cookie-settings>Cookie-Einstellungen</a>
       </nav>
       <p class="copyright">© Shvets Bau GmbH. Preise und Leistungen auf dieser Website sind unverbindliche Richtwerte; maßgeblich sind das individuelle Angebot und die Baubeschreibung. Alle Hausabbildungen sind Visualisierungen.</p>
     </div>
@@ -455,11 +490,11 @@
   </dialog>
 
   <div class="mobile-cta">
-    <a href="tel:+4991982370831" class="btn btn-secondary" data-cta="mobile_fixed_phone" aria-label="Anrufen">Anrufen</a>
+    <a href="tel:+491775011880" class="btn btn-secondary" data-cta="mobile_fixed_phone" aria-label="Anrufen">Anrufen</a>
     <a href="#anfrage" class="btn btn-primary" data-cta="mobile_fixed_cta">Ersteinschätzung</a>
   </div>
 
-  <a href="https://wa.me/4915110173628" class="whatsapp-float" aria-label="Per WhatsApp schreiben (öffnet WhatsApp)" target="_blank" rel="noopener" data-cta="whatsapp_click">
+  <a href="https://wa.me/491775011880" class="whatsapp-float" aria-label="Per WhatsApp schreiben (öffnet WhatsApp)" target="_blank" rel="noopener" data-cta="whatsapp_click">
     <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3Z"/></svg>
   </a>
 </body>
